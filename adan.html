@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      :root {
+        --blue: #16697a;
+        --orange: #db6400;
+        --yellow: #ffa62b;
+        --grey: #f8f1f1;
+      }
+      body {
+        font-family: "IBM Plex Sans", sans-serif;
+        width: 100vw;
+        margin: 0;
+        height: 100vh;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--blue);
+        color: var(--grey);
+      }
+      .header a {
+        color: var(--grey);
+      }
+      .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .main {
+        background-color: var(--orange);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .main section {
+        width: 500px;
+        background-color: var(--yellow);
+        margin: 50px 0 0;
+        padding: 20px;
+        border-radius: 12px;
+        color: var(--grey);
+      }
+      #proyectos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .card {
+        border: 2px dashed var(--blue);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 12px;
+      }
+      .card a {
+        color: var(--grey);
+      }
+      #enlaces a {
+        color: var(--grey);
+      }
+      #enlaces {
+        margin-bottom: 300px;
+      }
+      .titles {
+        font-size: 22px;
+        margin: 0;
+      }
+      .title {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Portafolio Adan Saavedra</h1>
+      <div class="menu">
+        <p><a href="#presentacion">Presentacion</a></p>
+        <p><a href="#proyectos">Proyectos Realizados</a></p>
+        <p><a href="#habilidades">Habilidades</a></p>
+        <p><a href="#exp">Experiencia</a></p>
+        <p><a href="#enlaces">Enlaces</a></p>
+      </div>
+    </header>
+    <main class="main">
+      <section id="presentacion">
+        <p class="titles">Presentacion</p>
+        <p>
+          Mi nombre es Adan Saavedra, tengo 22 años, soy estudiante de
+          Ingenieria de software, y del Stack de desarrollo PERNN. Me gusta el
+          desarrollo web y por lo general lo practico con los retos de frontend
+          mentor y retos que veo en internet.
+        </p>
+      </section>
+      <section id="proyectos">
+        <p class="titles">Proyectos Realizados</p>
+
+        <div class="card">
+          <p class="title">Async Landing Page</p>
+          <p class="description">
+            Pagina web que consume un API de manera asincrona. El proyecto esta
+            realizado con HTML, CSS, Tailwind, JS, node JS.
+          </p>
+          <p class="preview">
+            <a
+              class="previewAnchor"
+              href="https://adansaavedra.github.io/async-landing/"
+              target="_blank"
+              >Ver pagina</a
+            >
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="title">Random Cat's facts</p>
+          <p class="description">
+            Pagina web que consume un API y genera datos aleatorios sobre gatos,
+            tiene un boton que al ser tocado genera otro dato aleatorio. El
+            proyecto esta realizado con HTML y JS.
+          </p>
+          <p class="preview">
+            <a
+              class="previewAnchor"
+              href="https://adansaavedra.github.io/random-cats-facts-app/"
+              target="_blank"
+              >Ver pagina</a
+            >
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="title">Intro Page with sign up form</p>
+          <p class="description">
+            Este es un reto de frontend mentor, el cual es una pagina web para
+            registrarse, el proyecto esta realizado con HTML, CSS y JS.
+          </p>
+          <p class="preview">
+            <a
+              class="previewAnchor"
+              href="https://adansaavedra.github.io/Intro-component-with-sign-up-form-solution/"
+              target="_blank"
+              >Ver pagina</a
+            >
+          </p>
+        </div>
+      </section>
+      <section id="habilidades">
+        <p class="titles">Habilidades</p>
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git</li>
+          <li>Github</li>
+          <li>SQL</li>
+          <li>OOP</li>
+          <li>Java</li>
+        </ul>
+      </section>
+      <section id="exp">
+        <p class="titles">Experiencia</p>
+        <p>
+          Actualmente no tengo experiencia laboral, pero si he realizado
+          proyectos y he participado en proyectos para empresas.
+        </p>
+      </section>
+      <section id="enlaces">
+        <p class="titles">Enlaces</p>
+        <p>
+          <a href="https://github.com/AdanSaavedra" target="_blank">Github</a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/adansaavedra/" target="_blank"
+            >LinkIn</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

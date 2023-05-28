@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funcionalidad2</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .carousel {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .carousel-item {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+    }
+    
+    .carousel-controls button {
+      border: none;
+      background-color: #ddd;
+      color: #333;
+      padding: 8px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    
+    .carousel-controls button:hover {
+      background-color: #bbb;
+    }
+    
+    .carousel-controls button:focus {
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="Imagenes/imagen1.jpg" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagenes/imagen2.jpg" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagenes/imagen3.jpg" alt="Imagen 3">
+      </div>
+    </div>
+  </div>
+  
+  <div class="carousel-controls">
+    <button onclick="prevSlide()">&lt;</button>
+    <button onclick="nextSlide()">&gt;</button>
+  </div>
+  
+  <script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const prevButton = document.querySelector('.carousel-controls button:first-child');
+    const nextButton = document.querySelector('.carousel-controls button:last-child');
+    let currentSlide = 0;
+    const totalSlides = carouselInner.children.length;
+    
+    function showSlide(slideIndex) {
+      carouselInner.style.transform = `translateX(-${slideIndex * 100}%)`;
+      currentSlide = slideIndex;
+      
+      if (currentSlide === 0) {
+        prevButton.disabled = true;
+      } else {
+        prevButton.disabled = false;
+      }
+      
+      if (currentSlide === totalSlides - 1) {
+        nextButton.disabled = true;
+      } else {
+        nextButton.disabled = false;
+      }
+    }
+    
+    function prevSlide() {
+      if (currentSlide > 0) {
+        showSlide(currentSlide - 1);
+      }
+    }
+    
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        showSlide(currentSlide + 1);
+  }
+}
+
+showSlide(currentSlide);
+</script>
+<br><br>
+<article>
+    <section style="width: 1000px; text-align:justify">
+            <div>
+                <h3 style="text-align: center;">Noticia #1</h3>
+                <p>El Ministerio Público de Venezuela confirmó la muerte 
+                de Juan Almeida, una de las personas investigadas en la 
+                presunta trama de corrupción en varias empresas públicas 
+                del país que estalló en marzo, informó en Twitter el 
+                fiscal general Tarek William Saab.</p>
+                
+                <p>Almeida, quien se identificaba en las redes sociales como
+                hacker con el apodo de N33, estaba en arresto domiciliario.
+                En abril el canal oficial Venezolana de Televisión informó
+                que había sido presentado en un centro de salud. Nunca se
+                revelaron los cargos.</p>
+
+                <p>CNN ha intentado comunicarse con la defensa de Almeida para
+                conocer su versión, pero aún no ha obtenido respuesta.
+                Saab informó que Almeida “sufría de una enfermedad terminal
+                diagnosticada como cirrosis hepática” y por ello había 
+                recibido una medida de arresto domiciliario. Hasta ahora el
+                fiscal no había informado que había recibido ese beneficio.</p>
+            
+                <p>Almeida era investigado, junto con dos de sus hermanos, como
+                “presunto operador tecnológico” en el caso Pdvsa/Cripto, 
+                según el ministro de Comunicación e información, Freddy Ñáñez, 
+                y es el segundo investigado relacionado con los supuestos 
+                hechos de corrupción en las compañías del estado venezolano 
+                que muere después de ser detenido.</p>
+            </div>
+            <div>
+                <h3 style="text-align: center;">Noticia #2</h3>
+                <p>La vicepresidenta de Argentina, Cristina Fernandez de Kirchner, 
+                reiteró este martes que no será candidata, de cara a las próximas 
+                elecciones en las que se renovará la presidencia del país y otros 
+                cargos.
+                </p>
+
+                <p>“No voy a ser mascota del poder por ninguna candidatura”, indicó
+                a través de una carta.
+                </p>
+                <p>
+                La también expresidenta de la Nación explicó en su escrito que busca
+                evitar que “cualquier candidatura que pueda ostentar” sea objeto de 
+                una inhabilitación por parte del Poder Judicial, hacia el cual 
+                manifestó desconfianza.
+                </p>
+            </div>
+            <div>
+                <h3 style="text-align: center;">Noticia #3</h3>
+                <p>
+                    Una persona murió y otra quedó gravemente herida este domingo
+                    en un centro comercial de la capital colombiana en lo que -por
+                    el momento- se cree que fue un ataque de una persona contra su
+                    pareja, según informó en Twitter la alcaldesa de Bogotá, 
+                    Claudia López Hernández.
+                </p>
+                
+                <p>
+                    Según la funcionaria, un hombre entró a Unicentro -ubicado 
+                    al nororiente de la ciudad- y tras discutir con la mujer, 
+                    quien trabajaba en un local, le "disparó a ella" y luego trató 
+                    de quitarse la vida.
+                </p>
+
+                <p>
+                    López dijo que el sujeto "se disparó luego de cometer el feminicidio, 
+                    pero alcanzó a ser trasladado a un hospital aunque su estado es muy 
+                    delicado".
+                </p>
+            
+                <p>
+
+                </p>
+            </div>
+    </section><br><br>
+</article>
+</body>
+</html>
